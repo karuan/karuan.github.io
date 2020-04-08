@@ -3,11 +3,11 @@
 <h2>Unlock Puzzle - Space</h2>
 <body>
 
-Puzzle Number: <input type="text" id="puzzle" value="Mickey">
+Puzzle Number: <input type="text" id="puzzle" value="00">
 Code: <input type="text" id="code" value="0000">
 
 
-<p>Click the button to change the value of the text field.</p>
+<!--<p>Click the button to change the value of the text field.</p>-->
 
 <button onclick="myFunction()">Try it</button>
 <br/>
@@ -41,6 +41,9 @@ function myFunction() {
  	errors = errors + 1;
     document.getElementById("errors").innerHTML = errors;
  }
+else{
+	document.getElementById("solution").innerHTML = "Puzzle number is invalid.";
+};
   }
  ;
 }
@@ -48,7 +51,7 @@ function myFunction() {
 </script>
 <br/>
 
-<b>Action: </b> <p id="solution">A Paragraph.</p>
+<b>Action: </b> <p id="solution"></p>
 
 <br/><b>Penalties (subtract 2 minutes for each mistake):</b> <p id="errors">0</p>
 
