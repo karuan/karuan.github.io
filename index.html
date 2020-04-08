@@ -8,7 +8,7 @@ Code: <input type="text" id="code" value="0000">
 
 
 <!--<p>Click the button to change the value of the text field.</p>-->
-
+	<br/>
 <button onclick="myFunction()">Try it</button>
 <br/>
 <script>
@@ -40,13 +40,13 @@ function myFunction() {
 	else{
  	errors = errors + 1;
     document.getElementById("errors").innerHTML = errors;
- }
+	}
+	  
+  }
 else{
 	document.getElementById("solution").innerHTML = "Puzzle number is invalid.";
 };
-  }
- ;
-}
+  } //end function
 
 </script>
 <br/>
