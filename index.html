@@ -1,9 +1,56 @@
+<!DOCTYPE html>
 <html>
-<head>
-</head>
+<h2>Unlock Puzzle - Space</h2>
 <body>
-KARUAN FIRST GITHUB PAGE
+
+Puzzle Number: <input type="text" id="puzzle" value="Mickey">
+Code: <input type="text" id="code" value="0000">
+
+
+<p>Click the button to change the value of the text field.</p>
+
+<button onclick="myFunction()">Try it</button>
+<br/>
+<script>
+//var integer = parseInt(text, 10);
+var dict = {
+  61: ["3254","Grab card 37"],
+  49: ["7581","Grab card 53"],
+  70: ["3474","Grab card 75"],
+  59: ["3244","Grab card 30"],
+  30: ["3124","Grab card 58"],
+  58: ["5312","Grab card 73"],
+  68: ["4975","Grab card 33"],
+  52: ["0502","Grab card 71"],
+  71: ["0811","Grab card 80"],
+  39: ["3423","Grab card 87"],
+  87: ["4220","Grab card 35"],
+  23: ["7268","Grab card 38"],
+  45: ["6253","Grab card 47"],
+  
+};
+
+var errors = 0;
+function myFunction() {
+   var puzzleNum = parseInt(document.getElementById("puzzle").value,10);
+  if (puzzleNum in dict){
+  	if (document.getElementById("code").value == dict[puzzleNum][0]){
+  	document.getElementById("solution").innerHTML = "Correct code. "+dict[puzzleNum][1];
+    }
+	else{
+ 	errors = errors + 1;
+    document.getElementById("errors").innerHTML = errors;
+ }
+  }
+ ;
+}
+
+</script>
+<br/>
+
+<b>Action: </b> <p id="solution">A Paragraph.</p>
+
+<br/><b>Penalties (subtract 2 minutes for each mistake):</b> <p id="errors">0</p>
 
 </body>
-
 </html>
